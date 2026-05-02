@@ -3,91 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>梁文伟 - Java后端实习简历（终版）</title>
+<title>梁文伟 - Java后端实习简历</title>
 <style>
-body{font-family:"Segoe UI",Arial;background:#f5f7fa;margin:0}
-.container{max-width:900px;margin:40px auto;background:#fff;padding:40px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.08)}
-h1{margin:0;font-size:28px}
-.info{color:#666;margin-top:8px;font-size:14px}
-h2{margin-top:28px;font-size:20px;border-left:4px solid #4a90e2;padding-left:10px}
-h3{margin-top:18px;font-size:16px}
-ul{padding-left:20px}
-li{margin-bottom:6px;line-height:1.6}
-.tags span{display:inline-block;background:#eef3ff;color:#4a90e2;padding:4px 8px;margin:4px 6px 0 0;border-radius:4px;font-size:13px}
-.stack{color:#555;font-size:13px;margin-bottom:6px}
+    :root {
+        --main-blue: #1a3a6e; 
+    }
+    body { font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif; background: #f0f2f5; margin: 0; color: #333; }
+    
+    /* 总容器 */
+    .container { 
+        max-width: 850px; 
+        margin: 0 auto; 
+        background: var(--main-blue); /* 整体背景设为深蓝，溢出部分即为边条 */
+        box-shadow: 0 0 15px rgba(0,0,0,0.1); 
+    }
+    
+    /* 头部区域 */
+    .header-wrapper { background: var(--main-blue); color: #fff; padding: 35px 45px 20px 45px; }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; }
+    .header-info { width: 78%; display: grid; grid-template-columns: 1.2fr 1fr; gap: 10px 15px; }
+    .header-info div { font-size: 14px; color: rgba(255,255,255,0.9); }
+    .header-info .name { font-size: 26px; font-weight: bold; grid-column: span 2; margin-bottom: 8px; color: #fff; letter-spacing: 1px; }
+    
+    /* 照片区域 */
+    .photo-box { width: 110px; height: 140px; border: 2px solid rgba(255,255,255,0.3); background: #fff; border-radius: 4px; overflow: hidden; }
+    .photo-box img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* 中间白色内容区：通过左右 margin 露出背景的深蓝色，模拟 20px 边条 */
+    .main-content { 
+        background: #fff; 
+        margin: 0 20px; /* 左右各留出 20px 的深蓝边条 */
+        padding: 5px 35px 30px 35px; 
+    }
+
+    /* 底部深蓝填充区 */
+    .footer-spacer {
+        height: 30px;
+        background: var(--main-blue);
+    }
+
+    /* 标题样式 */
+    .title-wrapper { border-bottom: 2px solid var(--main-blue); margin-top: 25px; margin-bottom: 15px; position: relative; }
+    .section-title { 
+        background: var(--main-blue); 
+        color: white; 
+        padding: 4px 25px 4px 15px; 
+        display: inline-block; 
+        font-size: 16px; 
+        font-weight: bold;
+        clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%); 
+        min-width: 100px;
+    }
+
+    /* 基础文字样式 */
+    .edu-item { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 6px; font-size: 15px; color: #000; }
+    .edu-detail { font-size: 13.5px; line-height: 1.7; color: #444; }
+    .project-item { margin-bottom: 18px; border-bottom: 1px dashed #eee; padding-bottom: 10px; }
+    .project-item:last-child { border-bottom: none; }
+    .project-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
+    .project-name { font-weight: bold; font-size: 15px; color: #000; }
+    .project-tech { font-size: 12px; color: var(--main-blue); font-weight: bold; border: 1px solid var(--main-blue); padding: 0px 6px; border-radius: 3px; }
+    ul { padding-left: 18px; margin: 5px 0; }
+    li { font-size: 13px; line-height: 1.7; margin-bottom: 4px; color: #333; }
+    .skill-line { margin-bottom: 10px; font-size: 13.5px; line-height: 1.6; }
+    .skill-label { font-weight: bold; color: var(--main-blue); min-width: 75px; display: inline-block; }
+
 </style>
 </head>
 <body>
+
 <div class="container">
+    <!-- 头部区域 -->
+    <div class="header-wrapper">
+        <div class="header">
+            <div class="header-info">
+                <!-- <div class="name">姓名：梁文伟</div> -->
+                <div><strong>姓名：</strong>梁文伟</div>
+                <div><strong>求职意向：</strong>Java后端开发实习生</div>
+                <div><strong>出生年月：</strong>2003.11</div>
+                <div><strong>联系电话：</strong>15260655179</div>
+                <div><strong>电子邮箱：</strong>wweien1130@gmail.com</div>
+                <div><strong>GitHub：</strong>github.com/wweien1130-ui</div>
+                <div><strong>到岗时间：</strong>随时到岗，可长期实习</div>
+            </div>
+            <div class="photo-box">
+                <img src="d:\360安全浏览器下载\xwechat_files\wxid_l809kxz758yh22_a80d\temp\RWTemp\2026-05\15e06cd1f3fdcd16b10c05c926717e5e.jpg" alt="个人照片">
+            </div>
+        </div>
+    </div>
 
-<h1>梁文伟 | Java后端开发实习生</h1>
-<div class="info">大三在读 ｜ 电话：15260655179 ｜ 邮箱：wweien1130@gmail.com ｜ GitHub：https://github.com/wweien1130-ui</div>
+    <!-- 白色主体区域（两侧露出深蓝边条） -->
+    <div class="main-content">
+        <!-- 教育背景 -->
+        <div class="title-wrapper">
+            <div class="section-title">教育背景</div>
+        </div>
+        <div class="edu-item">
+            <span>福州大学至诚学院</span>
+            <span>计算机科学与技术 (本科)</span>
+            <span>2023.09 - 至今</span>
+        </div>
+        <div class="edu-detail">
+            <strong>主修课程：</strong>数据结构、计算机组成原理、操作系统、数据库系统原理、Java程序设计、Spring Boot企业级开发等。<br>
+            <strong>在校表现：</strong>校级三等奖学金，具备扎实的专业基础，能够快速上手新技术。
+        </div>
 
-<h2>求职意向</h2>
-<p>Java后端开发实习 ｜ 可尽快到岗 ｜ 可长期实习</p>
+        <!-- 项目经历 -->
+        <div class="title-wrapper">
+            <div class="section-title">项目经历</div>
+        </div>
 
-<h2>个人简介</h2>
-<p>
-专注Java后端开发，具备完整项目经验（设计→开发→部署）。
-能够独立完成业务模块开发，并在项目中实践缓存优化、异步处理及AI能力接入。
-具备良好的代码规范与问题定位能力。
-</p>
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-name">Nova-Agent 智能体系统</span>
+                <span class="project-tech">Spring Boot + Redis + Spring AI</span>
+            </div>
+            <ul>
+                <li>基于 <strong>LLM</strong> 构建自动化任务处理流程，将 AI 能力深度集成至业务逻辑中。</li>
+                <li>使用 <strong>Spring AI Alibaba</strong> 封装模型调用，并利用 <strong>Redis</strong> 管理对话上下文。</li>
+                <li>实现 <strong>RAG (检索增强生成)</strong> 流程，通过精准检索提升 AI 回答的专业性。</li>
+            </ul>
+        </div>
 
-<h2>技术能力</h2>
-<div class="tags">
-<span>Java</span><span>Spring Boot</span><span>MyBatis</span>
-<span>MySQL</span><span>Redis</span><span>Kafka</span>
-<span>Spring AI Alibaba</span><span>RAG</span>
-<span>Git</span><span>Linux</span><span>Docker</span>
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-name">Nova-Smart 电商业务中台</span>
+                <span class="project-tech">Spring Boot + Kafka + MySQL</span>
+            </div>
+            <ul>
+                <li>独立实现用户、商品、订单模块，针对热点数据采用 <strong>Redis 缓存</strong> 优化。</li>
+                <li>引入 <strong>Kafka</strong> 异步处理订单，降低接口响应时延，提升系统吞吐能力。</li>
+                <li>利用 <strong>Redis 分布式锁</strong> 解决超卖问题，确保业务数据最终一致性。</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-name">MYAPI 接口管理平台</span>
+                <span class="project-tech">Spring Boot + MyBatis + MySQL</span>
+            </div>
+            <ul>
+                <li>开发接口管理系统，支持接口信息快速维护与在线文档生成。</li>
+                <li>设计并实现<strong>接口权限校验与访问控制</strong>，保障后端 API 调用安全性。</li>
+                <li>集成接口调用记录功能，通过日志统计实时监控健康状况。</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-name">HarmonyOS 小程序开发</span>
+                <span class="project-tech">TypeScript + ArkUI</span>
+            </div>
+            <ul>
+                <li>完成鸿蒙原生小程序 UI 页面开发，熟悉 ArkUI 组件化开发模式。</li>
+                <li>负责状态管理与前后端接口对接，掌握 HarmonyOS 开发流程。</li>
+            </ul>
+        </div>
+
+        <!-- 技能荣誉 -->
+        <div class="title-wrapper">
+            <div class="section-title">技能荣誉</div>
+        </div>
+        
+        <div class="skill-line">
+            <span class="skill-label">专业技能：</span>
+            熟悉 Java 核心，熟练应用 Spring Boot、MyBatis-Plus、MySQL；了解 Redis 缓存、Kafka 异步机制及 Docker 容器部署。
+        </div>
+        
+        <div class="skill-line">
+            <span class="skill-label">外语水平：</span>
+            英语 CET-4，能够流畅阅读中英文技术文档。
+        </div>
+        
+        <div class="skill-line">
+            <span class="skill-label">所获荣誉：</span>
+            校级三等奖学金、具备良好的编码习惯与团队协作精神。
+        </div>
+    </div>
+
+    <!-- 底部 30px 深蓝填充 -->
+    <div class="footer-spacer"></div>
 </div>
 
-<h2>项目经验</h2>
-
-<h3>Nova-Agent 智能体系统（核心项目）</h3>
-<div class="stack">技术栈：Spring Boot + Redis + Spring AI Alibaba + RAG</div>
-<ul>
-<li>将AI能力与业务逻辑结合，实现自动化任务处理</li>
-<li>基于LLM构建智能体系统，实现任务生成与执行流程</li>
-<li>使用Spring AI Alibaba封装模型调用，统一AI接入方式</li>
-<li>实现基础RAG流程（检索+生成），提升回答准确性</li>
-<li>设计Prompt模板，优化生成稳定性与可控性</li>
-<li>使用Redis管理上下文，实现多轮对话能力</li>
-</ul>
-
-<h3>Nova-Smart 电商业务中台</h3>
-<div class="stack">技术栈：Spring Boot + MyBatis + Redis + Kafka + MySQL</div>
-<ul>
-<li>实现用户、商品、订单等核心业务模块</li>
-<li>使用Redis缓存热点数据，并通过分布式锁解决并发问题</li>
-<li>引入Kafka实现订单异步处理，提升系统吞吐能力</li>
-<li>优化下单流程，将部分非核心逻辑异步化，提升系统响应效率</li></ul>
-
-<h3>MYAPI 接口管理平台</h3>
-<div class="stack">技术栈：Spring Boot + MyBatis + MySQL</div>
-<ul>
-<li>实现接口管理与调用控制功能</li>
-<li>支持接口权限校验与访问控制</li>
-<li>提供接口信息维护与调用记录功能</li>
-</ul>
-
-<h3>HarmonyOS 小程序开发（前端实践）</h3>
-<div class="stack">技术栈：TypeScript + DevEco Studio</div>
-<ul>
-<li>完成鸿蒙小程序页面开发与交互实现</li>
-<li>实现基础状态管理与页面逻辑处理</li>
-<li>熟悉小程序开发流程与组件使用</li>
-</ul>
-
-<h2>教育背景</h2>
-<p>福州大学至诚学院 ｜ 计算机科学与技术 ｜ 本科<br>2023 - 至今</p>
-
-<h2>其他</h2>
-<ul>
-<li>CET-4</li>
-<li>校级三等奖学金</li>
-<li>具备良好编码习惯与学习能力</li>
-</ul>
-
-</div>
 </body>
 </html>
